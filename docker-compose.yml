@@ -1,0 +1,27 @@
+name: geaworth
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_LOCAL_IMAGES: ${VITE_LOCAL_IMAGES:-false}
+    image: geaworth-properties:latest
+    container_name: geaworth-web
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: "3000"                    # port inside the container; PORT in .env is the host port
+      STORAGE_DIR: /app/storage
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+    volumes:
+      - geaworth-data:/app/storage    # listings, users, photos, inquiries survive rebuilds
+
+volumes:
+  geaworth-data:
