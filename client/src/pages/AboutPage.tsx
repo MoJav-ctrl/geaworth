@@ -82,45 +82,6 @@ export function AboutPage() {
     },
   ];
 
-  const leaders = [
-    {
-      name: "Babatunde Adeleke",
-      role: "Managing Director & Co-Founder",
-      exp: "15+ Yrs Exp",
-      badge: "NITP • Ex-State Planner",
-      badgeIcon: "badge",
-      bio: "Ex-Lagos State Ministry of Physical Planning consultant. Advises international funds and private families on land tenure security and master-planned layouts.",
-      image: "portrait-md",
-    },
-    {
-      name: "Amara Nwachukwu",
-      role: "Head of Acquisitions & Legal",
-      exp: "Supreme Court Bar",
-      badge: "LL.M • Land Tenure Specialist",
-      badgeIcon: "gavel",
-      bio: "Barrister & Solicitor of the Supreme Court of Nigeria. Spearheads due diligence on Governor’s Consents, Gazettes, and Lagos Land Bureau titling.",
-      image: "portrait-acquisitions-legal",
-    },
-    {
-      name: "Olumide Bakare",
-      role: "Head of Property & Facilities",
-      exp: "400+ Units Managed",
-      badge: "RICS • NIESV Certified",
-      badgeIcon: "engineering",
-      bio: "Chartered Surveyor with track record across premium developments in Ikoyi and Lekki. Maintains mechanical reliability and preventive structural preservation.",
-      image: "portrait-facilities",
-    },
-    {
-      name: "Kemi Alabi-Davies",
-      role: "Director of Diaspora Services",
-      exp: "UK • US Diaspora Lead",
-      badge: "London / Lagos Corridor",
-      badgeIcon: "public",
-      bio: "Splits time between London and Lagos. Has guided over 350 Nigerians abroad through remote inspections, transparent escrow accounts, and deeds closing.",
-      image: "portrait-diaspora",
-    },
-  ];
-
   const milestones = [
     {
       year: "2014",
@@ -374,62 +335,6 @@ export function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 5. LEADERSHIP: STEERED BY SEASONED HANDS */}
-      <section className="w-full max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-16 md:py-24">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
-          <div className="max-w-xl">
-            <span className="text-[12px] uppercase tracking-[0.08em] text-brand-red-deep font-bold block mb-1">
-              Leadership
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-brand-ink">
-              Steered by Seasoned Hands
-            </h2>
-          </div>
-          <p className="text-[15px] text-brand-nav max-w-md">
-            Combining decades of Lagos urban planning, Supreme Court land jurisprudence, and international asset advisory.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {leaders.map((lead, idx) => (
-            <div
-              key={idx}
-              className="group bg-white border border-brand-border rounded-2xl overflow-hidden shadow-sm hover:border-brand-navy/30 hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="h-72 w-full overflow-hidden bg-brand-sand relative">
-                  <Photo name={lead.image} alt={lead.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width={600} height={750} />
-                  <div className="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur px-2.5 py-1 text-brand-ink text-[11px] uppercase font-bold rounded-lg shadow-xs">
-                    {lead.exp}
-                  </div>
-                </div>
-
-                <div className="p-5 flex flex-col gap-2">
-                  <h3 className="font-serif text-[19px] font-bold text-brand-ink">
-                    {lead.name}
-                  </h3>
-                  <p className="text-[12px] uppercase font-bold text-brand-red-deep tracking-wider">
-                    {lead.role}
-                  </p>
-                  <p className="text-[13px] text-brand-nav mt-1 leading-relaxed">
-                    {lead.bio}
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 pt-0">
-                <div className="pt-3 border-t border-brand-border flex items-center gap-1.5 text-[12px] text-brand-muted font-semibold">
-                  <span className="material-symbols-outlined text-brand-navy text-sm">
-                    {lead.badgeIcon}
-                  </span>
-                  <span>{lead.badge}</span>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

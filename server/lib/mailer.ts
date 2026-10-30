@@ -29,7 +29,10 @@ export function notify(subject: string, lines: Record<string, unknown>): void {
   const text = Object.entries(lines)
     .map(([k, v]) => `${k}: ${typeof v === "object" ? JSON.stringify(v) : String(v)}`)
     .join("\n");
-  t.sendMail({ from: process.env.SMTP_FROM || to, to, subject, text }).catch((err) =>
+  // Pressing Reply on the notification goes straight to the visitor who filled in the form.
+  // (Form emails are validated upstream, so this is always a clean address.)
+  const replyTo = typeof lines.email === "string" ? lines.email : undefined;
+  t.sendMail({ from: process.env.SMTP_FROM || to, to, replyTo, subject, text }).catch((err) =>
     console.error("Email notification failed (submission was still saved):", err.message),
   );
 }

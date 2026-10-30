@@ -53,10 +53,10 @@ export const SITE_CONFIG: SiteConfig = {
     coordinates: { lat: 6.4478, lon: 3.4723 },
   },
   phones: {
-    desk: "+23418924400",
-    deskDisplay: "+234 1 892 4400",
-    whatsapp: "+2348030007890",
-    whatsappDisplay: "+234 803 000 7890"
+    desk: "+2347081422110",
+    deskDisplay: "+2347081422110",
+    whatsapp: "+2347081422110",
+    whatsappDisplay: "+2347081422110"
   },
   emails: {
     /** The one public address. Website form notifications are sent here too (see NOTIFICATION_EMAIL). */
@@ -68,12 +68,12 @@ export const SITE_CONFIG: SiteConfig = {
     sunday: "Emergency Tenant Support Only"
   },
   socials: {
-    whatsappLink: "https://wa.me/2348030007890"
+    whatsappLink: "https://wa.me/2347081422110"
   }
 };
 
 export function getWhatsAppUrl(prefilledText?: string): string {
-  const base = "https://wa.me/2348030007890";
+  const base = "https://wa.me/2347081422110";
   if (!prefilledText) {
     return `${base}?text=Hello%20Geaworth%20Properties,%20I%20would%20like%20to%20inquire%20about%20a%20property%20listing.`;
   }
