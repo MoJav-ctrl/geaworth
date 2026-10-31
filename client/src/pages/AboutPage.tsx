@@ -6,13 +6,13 @@ import { CountUp } from "../components/ui/CountUp.tsx";
 export function AboutPage() {
   const stats = [
     {
-      to: 48, prefix: "₦", suffix: "B+",
+      to: 2, prefix: "₦", suffix: "B+",
       label: "Facilitated Value",
       desc: "Closed Lagos acquisitions",
       color: "text-brand-red",
     },
     {
-      to: 1250, suffix: "+",
+      to: 100, suffix: "+",
       label: "Clients Housed",
       desc: "Families & corporates",
       color: "text-brand-navy",
@@ -84,31 +84,31 @@ export function AboutPage() {
 
   const milestones = [
     {
-      year: "2014",
+      year: "2021",
       title: "Lekki Foundations",
       dot: "bg-brand-red",
-      text: "Geaworth founded on Admiralty Way with a focus on thoroughly vetted residential lettings and investor leaseholds.",
+      text: "Geaworth founded in Lekki with a focus on thoroughly vetted residential lettings and investor leaseholds.",
     },
     {
-      year: "2017",
+      year: "2022",
       title: "Island Expansion",
       dot: "bg-brand-navy",
       text: "Expanded footprint into Old Ikoyi and Victoria Island commercial sales and bespoke institutional facility management.",
     },
     {
-      year: "2020",
+      year: "2023",
       title: "Diaspora Safe-Buy",
       dot: "bg-brand-ochre",
       text: "Launched the Diaspora Safe-Buy Guarantee featuring Alausa digital search streams and verifiable escrow protection.",
     },
     {
-      year: "2022",
+      year: "2024",
       title: "The Mainland Hub",
       dot: "bg-brand-ink",
       text: "Surpassed 1,000 successful client transactions and opened our Ikeja GRA office to serve the Mainland market.",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Green Future",
       dot: "bg-brand-red",
       text: "Pioneering energy audits and turnkey hybrid solar retrofits across our managed residential clusters.",
@@ -168,10 +168,10 @@ export function AboutPage() {
                       </span>
                       <div>
                         <p className="text-[12px] font-bold uppercase tracking-wide text-brand-ink">
-                          Admiralty Way, Lekki Phase 1
+                          Ikota, Lekki
                         </p>
                         <p className="text-[12px] text-brand-muted">
-                          Where our Lagos story began in 2014
+                          Where our Lagos story began in 2021
                         </p>
                       </div>
                     </div>
@@ -179,7 +179,7 @@ export function AboutPage() {
                 </div>
 
                 <div className="absolute -top-3 -right-3 bg-brand-navy text-white px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
-                  Est. 2014 • Island &amp; Mainland
+                  Est. 2021 • Island &amp; Mainland
                 </div>
               </div>
             </div>

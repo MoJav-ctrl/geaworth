@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import type { PropertyListing } from "../data/listings.ts";
-import { useListings } from "../hooks/useListings.ts";
+import { useListings, buildListingsQuery } from "../hooks/useListings.ts";
 import { PropertyCard } from "../components/ui/PropertyCard.tsx";
 import { PropertyDetailModal } from "../components/ui/PropertyDetailModal.tsx";
 import { SearchBar, SearchFilters } from "../components/ui/SearchBar.tsx";
@@ -9,6 +9,9 @@ import { formatNaira } from "../utils/pricing.ts";
 import { getWhatsAppUrl } from "../config/site.ts";
 import { WhatsAppIcon } from "../components/ui/WhatsAppIcon.tsx";
 import { Photo } from "../components/ui/Photo.tsx";
+
+/** How many listings Home shows before the visitor searches or filters. */
+const FEATURED_COUNT = 6;
 
 const ALL_FILTERS: SearchFilters = { category: "all", keyword: "", subMarket: "", propertyType: "", priceBracket: "" };
 
@@ -38,6 +41,10 @@ export function HomePage() {
   }, [searchParams]);
 
   const { items: filteredProperties, status: listingsStatus, retry: retryListings } = useListings(filters);
+
+  // With no search or filter active, Home only shows a featured selection; "Explore More" leads to all listings.
+  const filtersActive = buildListingsQuery(filters) !== "";
+  const visibleProperties = filtersActive ? filteredProperties : filteredProperties.slice(0, FEATURED_COUNT);
 
   // Real listing counts per neighbourhood (replaces the old hard-coded numbers).
   const { items: allListings, status: allStatus } = useListings(ALL_FILTERS);
@@ -278,10 +285,10 @@ export function HomePage() {
               Filter All
             </button>
             <Link
-              to="/?filter=all#curated-residences"
+              to="/properties"
               className="px-4 py-2 rounded-xl bg-brand-navy text-white text-[12px] uppercase font-bold hover:bg-brand-navy-hover transition-colors flex items-center gap-1.5"
             >
-              <span>Explore 240+ Units</span>
+              <span>Explore More</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>
@@ -289,7 +296,7 @@ export function HomePage() {
 
         {/* Property Grid (3 Columns) */}
         <p className="sr-only" role="status" aria-live="polite">
-          {listingsStatus === "ready" ? `${filteredProperties.length} properties found` : ""}
+          {listingsStatus === "ready" ? `${visibleProperties.length} properties found` : ""}
         </p>
         {listingsStatus === "loading" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" aria-busy="true">
@@ -316,9 +323,9 @@ export function HomePage() {
               Try again
             </button>
           </div>
-        ) : filteredProperties.length > 0 ? (
+        ) : visibleProperties.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredProperties.map((property) => (
+            {visibleProperties.map((property) => (
               <PropertyCard
                 key={property.id}
                 property={property}

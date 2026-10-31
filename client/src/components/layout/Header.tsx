@@ -97,10 +97,10 @@ export function Header() {
 
           {/* Right Section: Phone, Book Viewing Button, WhatsApp Icon */}
           <div className="flex items-center gap-4">
-            {/* Direct Lagos Desk Telephone (xl screens) */}
+            {/* Direct Support Desk Telephone (xl screens) */}
             <div className="hidden xl:flex flex-col text-right pr-2">
               <span className="text-[11px] uppercase tracking-[0.08em] text-brand-muted font-semibold">
-                Lagos Direct Desk
+                Support Desk
               </span>
               <a
                 href={`tel:${SITE_CONFIG.phones.desk}`}
@@ -116,8 +116,8 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex w-10 h-10 items-center justify-center rounded-xl bg-brand-whatsapp/10 text-brand-whatsapp hover:bg-brand-whatsapp hover:text-brand-ink transition-all shadow-sm"
-              title="Chat with Lagos Desk on WhatsApp"
-              aria-label="Chat with Lagos Desk on WhatsApp"
+              title="Chat with Support Desk on WhatsApp"
+              aria-label="Chat with Support Desk on WhatsApp"
             >
               <WhatsAppIcon className="w-5 h-5"/>
             </a>
@@ -220,7 +220,7 @@ export function Header() {
             <div className="pt-6 border-t border-brand-border flex flex-col gap-3">
               <div className="text-center pb-1">
                 <span className="text-xs uppercase tracking-wider text-brand-muted block">
-                  Lagos Direct Desk
+                  Support Desk
                 </span>
                 <a
                   href={`tel:${SITE_CONFIG.phones.desk}`}

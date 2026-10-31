@@ -13,7 +13,6 @@ export interface SiteConfig {
     country: string;
     landmark: string;
     mapsUrl: string;
-    /** Approximate pin for Plot 14, Admiralty Way, Lekki Phase 1 – verify on site before launch */
     coordinates: { lat: number; lon: number };
   };
   phones: {
@@ -32,6 +31,7 @@ export interface SiteConfig {
   };
   socials: {
     whatsappLink: string;
+    instagramLink: string;
   };
 }
 
@@ -39,18 +39,18 @@ export const SITE_CONFIG: SiteConfig = {
   name: "Geaworth Properties",
   wordmark: "Geaworth.",
   tagline: "Curating verified residential and commercial assets across Lagos. Rooted in structural integrity, verifiable land documentation, and seamless property acquisitions.",
-  rcNumber: "RC 1498320",
+  rcNumber: "RC 1586052",
   foundedYear: 2014,
   headquarters: {
-    address: "Plot 14 Admiralty Way, Lekki Phase 1, Lagos, Nigeria",
-    street: "Plot 14, Admiralty Way",
-    enclave: "Lekki Phase 1",
+    address: "21B, Road 3B, Ikota Villa Estate, Ikota, Lekki, Lagos, Nigeria",
+    street: "21B, Road 3B, Ikota Villa Estate",
+    enclave: "Ikota",
     city: "Lekki",
     state: "Lagos State",
     country: "Nigeria",
-    landmark: "Directly opposite The Palms Shopping corridor, adjacent to Ocean Basket.",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Plot+14+Admiralty+Way+Lekki+Phase+1+Lagos",
-    coordinates: { lat: 6.4478, lon: 3.4723 },
+    landmark: "Ikota Villa Estate",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=21B+Road+3B+Ikota+Villa+Estate+Ikota+Lekki+Lagos",
+    coordinates: { lat: 6.4456744, lon: 3.5593169 },
   },
   phones: {
     desk: "+2347081422110",
@@ -59,7 +59,6 @@ export const SITE_CONFIG: SiteConfig = {
     whatsappDisplay: "+2347081422110"
   },
   emails: {
-    /** The one public address. Website form notifications are sent here too (see NOTIFICATION_EMAIL). */
     info: "info@geaworthproperties.com"
   },
   workingHours: {
@@ -68,7 +67,8 @@ export const SITE_CONFIG: SiteConfig = {
     sunday: "Emergency Tenant Support Only"
   },
   socials: {
-    whatsappLink: "https://wa.me/2347081422110"
+    whatsappLink: "https://wa.me/2347081422110",
+    instagramLink: "https://www.instagram.com/geaworth_properties/"
   }
 };
 

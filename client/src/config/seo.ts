@@ -14,6 +14,11 @@ export const DEFAULT_SEO: SeoEntry = {
 /** One entry per route: unique <title> and meta description. */
 export const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/": DEFAULT_SEO,
+  "/properties": {
+    title: "Explore Properties for Sale, Rent & Shortlet in Lagos | Geaworth Properties",
+    description:
+      "Browse every title-verified Geaworth listing across Lagos. Filter by area, property type and budget for homes to buy, rent or book as shortlets.",
+  },
   "/services": {
     title: "Services built around how Lagos moves | Geaworth Properties",
     description:
@@ -32,7 +37,7 @@ export const SEO_BY_PATH: Record<string, SeoEntry> = {
   "/contact": {
     title: "Contact Us | Let's talk property | Geaworth Properties",
     description:
-      "Book a viewing or send an inquiry to Geaworth's Lekki Phase 1 advisory desk. Call +234 1 892 4400 or chat on WhatsApp; response within 45 minutes.",
+      "Book a viewing or send an inquiry to Geaworth's Lekki advisory desk. Call +234 708 142 2110 or chat on WhatsApp; response within 45 minutes.",
   },
   "/privacy": {
     title: "Privacy Policy | Geaworth Properties",

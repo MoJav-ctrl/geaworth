@@ -25,7 +25,7 @@ export function createApp() {
               "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
               "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
               "img-src": ["'self'", "data:", "blob:", "https://images.unsplash.com"],
-              "frame-src": ["https://www.openstreetmap.org"],
+              "frame-src": ["https://www.google.com", "https://maps.google.com"],
               "connect-src": ["'self'"],
               "object-src": ["'none'"],
               "base-uri": ["'self'"],

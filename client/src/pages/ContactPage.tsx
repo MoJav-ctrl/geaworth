@@ -116,7 +116,7 @@ export function ContactPage() {
       number: "01",
       question: "How quickly can I inspect a listed property?",
       answer:
-        "We provide same-day or next-day private viewing appointments for vetted buyers across Ikoyi, Lekki Phase 1, and Victoria Island. Private chauffeured site inspections from our Admiralty Way headquarters are also available for multi-property itineraries upon request.",
+        "We provide same-day or next-day private viewing appointments for vetted buyers across Ikoyi, Lekki Phase 1, and Victoria Island. Private chauffeured site inspections from our Ikota headquarters are also available for multi-property itineraries upon request.",
     },
     {
       id: "inq-faq-2",
@@ -166,7 +166,7 @@ export function ContactPage() {
             <div className="flex flex-wrap items-center gap-3 pt-2 text-[13px] text-brand-ink font-semibold">
               <div className="flex items-center gap-1.5 bg-brand-tint2 px-3 py-1.5 rounded-xl border border-brand-border">
                 <span className="material-symbols-outlined text-brand-red text-base">verified</span>
-                <span>Lekki Phase 1 Headquarters</span>
+                <span>Headquarters</span>
               </div>
               <div className="flex items-center gap-1.5 bg-brand-tint2 px-3 py-1.5 rounded-xl border border-brand-border">
                 <span className="material-symbols-outlined text-brand-navy text-base">schedule</span>
@@ -540,7 +540,7 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-serif text-[18px] font-bold text-brand-ink leading-tight">
-                        Lekki Headquarters
+                        Headquarters
                       </h3>
                       <span className="text-[11px] uppercase text-brand-muted font-semibold">
                         Advisory &amp; Escrow Services
@@ -584,7 +584,7 @@ export function ContactPage() {
                       Fastest Direct Route
                     </span>
                     <span className="font-serif text-[16px] font-bold text-brand-ink">
-                      Chat with Lagos Desk on WhatsApp
+                      Chat with Support Desk on WhatsApp
                     </span>
                     <span className="text-[13px] font-bold text-brand-whatsapp">
                       {SITE_CONFIG.phones.whatsappDisplay}
@@ -646,8 +646,8 @@ export function ContactPage() {
               <div className="bg-white border border-brand-border p-3 rounded-2xl shadow-sm flex flex-col gap-3">
                 <div className="relative w-full h-56 rounded-xl overflow-hidden bg-brand-sand">
                   <iframe
-                    title="Map of Geaworth Properties headquarters, Admiralty Way, Lekki Phase 1"
-                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon - 0.008}%2C${lat - 0.005}%2C${lon + 0.008}%2C${lat + 0.005}&layer=mapnik&marker=${lat}%2C${lon}`}
+                    title="Map of Geaworth Properties headquarters"
+                    src={`https://www.google.com/maps?q=${lat},${lon}&z=16&output=embed`}
                     width="600"
                     height="224"
                     loading="lazy"
@@ -658,12 +658,12 @@ export function ContactPage() {
                 <div className="flex items-center justify-between gap-3 px-1 pb-1">
                   <div>
                     <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-brand-red text-white uppercase tracking-wider">
-                      Admiralty Hub
+                      Lekki Hub
                     </span>
-                    <p className="font-serif text-[16px] text-brand-ink font-bold mt-1">Lekki Phase 1 • Ikoyi Corridor</p>
+                    <p className="font-serif text-[16px] text-brand-ink font-bold mt-1">Ikota • Lekki Corridor</p>
                   </div>
                   <a
-                    href={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`}
+                    href={`https://www.google.com/maps/search/?api=1&query=${lat},${lon}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 inline-flex items-center gap-1 min-h-11 bg-brand-tint2 hover:bg-brand-sand border border-brand-border text-brand-ink text-[12px] uppercase font-bold px-3 py-1.5 rounded-lg transition-colors"

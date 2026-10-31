@@ -83,13 +83,18 @@ export function Footer() {
                   >
                     {SITE_CONFIG.phones.whatsappDisplay}
                   </a>
-                  <span>/</span>
-                  <a
-                    href={`tel:${SITE_CONFIG.phones.desk}`}
-                    className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors"
-                  >
-                    {SITE_CONFIG.phones.deskDisplay}
-                  </a>
+                  {/* Only show the second number when it is actually different */}
+                  {SITE_CONFIG.phones.desk !== SITE_CONFIG.phones.whatsapp && (
+                    <>
+                      <span>/</span>
+                      <a
+                        href={`tel:${SITE_CONFIG.phones.desk}`}
+                        className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors"
+                      >
+                        {SITE_CONFIG.phones.deskDisplay}
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -139,13 +144,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/?filter=verified#curated-residences" className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors">
+                <Link to="/properties" className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors">
                   Verified Listings
                 </Link>
               </li>
               <li>
-                <a href="/api/reports/lagos-q3" download className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors">
-                  Lagos Market Reports
+                <a
+                  href={SITE_CONFIG.socials.instagramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center min-h-11 hover:text-brand-red transition-colors"
+                >
+                  Instagram
                 </a>
               </li>
             </ul>

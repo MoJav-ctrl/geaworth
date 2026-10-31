@@ -6,6 +6,7 @@ import { useSeo } from "./hooks/useSeo.ts";
 
 // Code-split: each page is its own chunk, loaded on demand.
 const HomePage = lazy(() => import("./pages/HomePage.tsx").then((m) => ({ default: m.HomePage })));
+const PropertiesPage = lazy(() => import("./pages/PropertiesPage.tsx").then((m) => ({ default: m.PropertiesPage })));
 const ServicesPage = lazy(() => import("./pages/ServicesPage.tsx").then((m) => ({ default: m.ServicesPage })));
 const SellPage = lazy(() => import("./pages/SellPage.tsx").then((m) => ({ default: m.SellPage })));
 const AboutPage = lazy(() => import("./pages/AboutPage.tsx").then((m) => ({ default: m.AboutPage })));
@@ -52,6 +53,7 @@ export function App() {
         />
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/properties" element={<PropertiesPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/sell" element={<SellPage />} />
           <Route path="/about" element={<AboutPage />} />

@@ -152,7 +152,7 @@ export function ServicesPage() {
               Gross Value Transacted
             </span>
             <span className="font-serif text-3xl sm:text-4xl font-bold text-brand-ink">
-              ₦45B+
+              ₦2B+
             </span>
             <p className="text-[13px] text-brand-nav">
               Verified assets across Island &amp; Mainland

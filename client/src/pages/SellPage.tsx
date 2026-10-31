@@ -244,7 +244,7 @@ export function SellPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 <div className="bg-brand-canvas p-3.5 rounded-xl text-center">
                   <span className="font-serif text-2xl font-bold text-brand-red block">
-                    ₦45B+
+                    ₦2B+
                   </span>
                   <span className="text-[11px] uppercase text-brand-muted font-bold mt-1 block">
                     Facilitated Volume
@@ -792,7 +792,7 @@ export function SellPage() {
                 Prefer a direct conversation with our Managing Director?
               </h3>
               <p className="text-[13px] text-brand-nav mt-0.5">
-                Available for private consultations on Admiralty Way or via WhatsApp.
+                Available for private consultations at our Ikota office or via WhatsApp.
               </p>
             </div>
             <a
